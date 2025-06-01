@@ -1,48 +1,186 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
-    <link rel="stylesheet" href="/static/style.css">
-  <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dealerships</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contact-main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .dealership-image-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+        
+        .dealership-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .dealership-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e3e3e3, #f0f0f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .contact-info-section {
+            display: flex;
+            padding: 30px;
+            gap: 30px;
+        }
+        
+        .contact-left {
+            flex-shrink: 0;
+        }
+        
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: darkturquoise;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .contact-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            line-height: 1.6;
+        }
+        
+        .contact-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .contact-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-   <main class="container mt-5">
-        <div class="contact-section">
-            <img src="/static/contactus.png" alt="Sample Image" class="img-fluid">
-            <div class="contact-details">
-                <h3>Contact Customer Service</h3>
-                <p>Email: <a href="mailto:support@bestcars.com">support@bestcars.com</a></p>
-                <p>Contact our National Advertising team: <a href="mailto:NationalSales@bestcars.com">NationalSales@bestcars.com</a></p>
-                <p>Contact our Public Relations team: <a href="mailto:PR@bestcars.com">PR@bestcars.com</a></p>
-                <p>Contact the bestcars.com offices: 312-611-1111</p>
-                <p>Become a bestcars.com car dealer: <a href="mailto:growwithbestcars.com">growwithbestcars.com</a></p>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+        <div class="container-fluid">
+            <h2 style="padding-right: 5%;">Dealerships</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mt-5">
+        <div class="contact-main-container">
+            <!-- Car dealership image at the top -->
+            <div class="dealership-image-container">
+                <img src="/static/car_dealership.jpg" 
+                     alt="Car Dealership" 
+                     class="img-fluid dealership-image"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                
+                <!-- Fallback car dealership image -->
+                <div class="dealership-placeholder" style="display: none;">
+                    🏢 Car Dealership Showroom
+                </div>
+            </div>
+            
+            <!-- Contact information below the image -->
+            <div class="contact-info-section">
+                <div class="contact-left">
+                    <!-- <div class="contact-icon">
+                        👤
+                    </div> -->
+                    <img src="/static/contactus.png" 
+                     alt="Car Dealership" 
+                     class="img-fluid dealership-image"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                </div>
+                
+                <div class="contact-right">
+                    <div class="contact-item">
+                        <strong>Contact Customer Service</strong><br>
+                        <a href="mailto:support@bestcars.com">support@bestcars.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Contact our National Advertising team</strong><br>
+                        <a href="mailto:NationalSales@bestcars.com">NationalSales@bestcars.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Contact our Public Relations team</strong><br>
+                        <a href="mailto:PR@bestcars.com">PR@bestcars.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Contact the bestcars.com offices</strong><br>
+                        <a href="tel:312-611-1111">312-611-1111</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Become a bestcars.com car dealer</strong><br>
+                        <a href="mailto:grow@bestcars.com">Visit growwithbestcars.com</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer class="text-center mt-5">
-        <button class="btn btn-primary">Previous</button>
+    
+    <footer class="text-center mt-5 mb-4">
+        <button class="btn btn-primary me-2">Previous</button>
         <button class="btn btn-primary">Next</button>
     </footer>
-    <script src="/static/bootstrap.bundle.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

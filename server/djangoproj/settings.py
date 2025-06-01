@@ -27,9 +27,9 @@ SECRET_KEY =\
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['localhost', 'https://salisuaminu6-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://salisuaminu6-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
+#https://salisuaminu6-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/
+ALLOWED_HOSTS = ['localhost', 'https://salisuaminu6-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://salisuaminu6-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
 
 
 REST_FRAMEWORK = {
@@ -65,7 +65,7 @@ TEMPLATES = [
         'DIRS': [ 
              os.path.join(BASE_DIR,'frontend/static'),
              os.path.join(BASE_DIR, 'frontend/build'),
-             os.path.join(BASE_DIR, 'frontend/build/static'),
+             os.path.join(BASE_DIR,'frontend/static'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
