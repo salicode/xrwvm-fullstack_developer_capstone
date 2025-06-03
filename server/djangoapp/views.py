@@ -138,4 +138,3 @@ def get_dealer_reviews(request, dealer_id):
             "status": 400,
             "message": "Bad Request"
         })
-        

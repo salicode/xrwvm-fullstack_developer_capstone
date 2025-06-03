@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY =\
+SECRET_KEY = \
     'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'
 
 
@@ -119,5 +120,4 @@ STATICFILES_DIRS = [
        os.path.join(BASE_DIR,'frontend/static'),
        os.path.join(BASE_DIR, 'frontend/build'),
        os.path.join(BASE_DIR, 'frontend/build/static'),
-
 ]
