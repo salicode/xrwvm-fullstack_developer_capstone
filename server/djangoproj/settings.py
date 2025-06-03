@@ -26,6 +26,8 @@ ALLOWED_HOSTS = [
     'https://salisuaminu6-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
     '127.0.0.1'
 ]
+
+
 CSRF_TRUSTED_ORIGINS = [
     'https://salisuaminu6-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
 ]
@@ -114,8 +116,14 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
+
+
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
