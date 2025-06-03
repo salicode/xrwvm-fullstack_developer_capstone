@@ -24,15 +24,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'https://salisuaminu6-8000.theiadockernext-0-labs-prod-'
-    'theiak8s-4-tor01.proxy.cognitiveclass.ai',
     '127.0.0.1',
+    'salisuaminu6-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
 ]
 
+
 CSRF_TRUSTED_ORIGINS = [
-    'https://salisuaminu6-8000.theiadockernext-0-labs-prod-'
-    'theiak8s-4-tor01.proxy.cognitiveclass.ai',
+    'https://salisuaminu6-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
 ]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
