@@ -22,19 +22,17 @@ SECRET_KEY = (
 
 DEBUG = True
 
-
 ALLOWED_HOSTS = [
     'localhost',
     'https://salisuaminu6-8000.theiadockernext-0-labs-prod-'
     'theiak8s-4-tor01.proxy.cognitiveclass.ai',
-    '127.0.0.1'
+    '127.0.0.1',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://salisuaminu6-8000.theiadockernext-0-labs-prod-'
-    'theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    'theiak8s-4-tor01.proxy.cognitiveclass.ai',
 ]
-
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -60,13 +58,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangoproj.urls'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [                     
-             os.path.join(BASE_DIR, 'frontend/static'),
-             os.path.join(BASE_DIR, 'frontend/build'),
-             os.path.join(BASE_DIR, 'frontend/static'),
+        'DIRS': [
+            os.path.join(BASE_DIR, 'frontend/static'),
+            os.path.join(BASE_DIR, 'frontend/build'),
+            os.path.join(BASE_DIR, 'frontend/static'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -91,20 +90,28 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'MinimumLengthValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'CommonPasswordValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'NumericPasswordValidator'
+        ),
     },
 ]
 
@@ -120,12 +127,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
-
 
 MEDIA_URL = '/media/'
 
