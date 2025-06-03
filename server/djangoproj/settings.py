@@ -60,7 +60,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangoproj.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -69,7 +68,6 @@ TEMPLATES = [
              os.path.join(BASE_DIR, 'frontend/build'),
              os.path.join(BASE_DIR, 'frontend/static'),
         ],
-        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
